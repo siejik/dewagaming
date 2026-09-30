@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#0b1020">
+  <title>Neon Tetris</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="app">
+    <section class="game-card">
+      <header>
+        <div>
+          <p class="eyebrow">MINI ARCADE</p>
+          <h1>NEON TETRIS</h1>
+        </div>
+        <div class="score-box">
+          <span>SKOR</span>
+          <strong id="score">0</strong>
+        </div>
+      </header>
+
+      <div class="game-layout">
+        <div class="board-wrap">
+          <canvas id="game" width="300" height="600" aria-label="Papan Tetris"></canvas>
+          <div id="overlay" class="overlay">
+            <h2>GAME OVER</h2>
+            <p>Skor kamu: <b id="finalScore">0</b></p>
+            <button id="restartBtn">MAIN LAGI</button>
+          </div>
+        </div>
+
+        <aside class="side-panel">
+          <div class="info">
+            <span>LEVEL</span>
+            <strong id="level">1</strong>
+          </div>
+          <div class="info">
+            <span>GARIS</span>
+            <strong id="lines">0</strong>
+          </div>
+
+          <div class="controls">
+            <h3>KONTROL</h3>
+            <p>← → &nbsp; Gerak</p>
+            <p>↑ &nbsp;&nbsp;&nbsp; Rotasi</p>
+            <p>↓ &nbsp;&nbsp;&nbsp; Turun</p>
+            <p>SPACE &nbsp; Jatuh cepat</p>
+            <p>P &nbsp;&nbsp;&nbsp; Pause</p>
+          </div>
+
+          <button id="pauseBtn" class="secondary">PAUSE</button>
+          <button id="restartSideBtn" class="secondary">RESTART</button>
+        </aside>
+      </div>
+
+      <div class="mobile-controls">
+        <button data-action="left">←</button>
+        <button data-action="down">↓</button>
+        <button data-action="rotate">↻</button>
+        <button data-action="right">→</button>
+        <button data-action="drop">DROP</button>
+      </div>
+    </section>
+    <p class="footer">HTML • CSS • JavaScript • Vercel Ready</p>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
